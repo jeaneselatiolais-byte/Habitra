@@ -280,11 +280,127 @@
     }
     footer ul a:hover { color: var(--text-secondary); }
 
+    /* Pricing */
+    .pricing {
+      padding: 80px 0;
+      border-top: 1px solid var(--surface-light);
+    }
+    .pricing h2 {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .pricing .subtitle {
+      text-align: center;
+      color: var(--text-secondary);
+      margin-bottom: 48px;
+      font-size: 16px;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      align-items: start;
+    }
+    .pricing-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-light);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      position: relative;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .pricing-card:hover {
+      transform: translateY(-2px);
+    }
+    .pricing-card.featured {
+      border-color: var(--accent);
+      box-shadow: 0 0 24px rgba(108, 99, 255, 0.15);
+    }
+    .pricing-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 100px;
+      white-space: nowrap;
+      letter-spacing: 0.5px;
+    }
+    .lifetime-badge {
+      background: var(--success);
+    }
+    .pricing-header {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--surface-light);
+      margin-bottom: 20px;
+    }
+    .pricing-header h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+    .pricing-price {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .pricing-period {
+      font-size: 13px;
+      color: var(--text-tertiary);
+    }
+    .pricing-detail {
+      margin-top: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--success);
+    }
+    .pricing-features {
+      list-style: none;
+    }
+    .pricing-features li {
+      font-size: 13px;
+      padding: 6px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pricing-features li.included {
+      color: var(--text-secondary);
+    }
+    .pricing-features li.excluded {
+      color: var(--text-tertiary);
+      opacity: 0.45;
+    }
+    .pricing-features .check {
+      color: var(--success);
+      font-size: 14px;
+      font-weight: 700;
+      flex-shrink: 0;
+      width: 16px;
+    }
+    .pricing-features .cross {
+      color: var(--text-tertiary);
+      font-size: 14px;
+      flex-shrink: 0;
+      width: 16px;
+    }
+
     @media (max-width: 640px) {
       nav ul { gap: 16px; }
       .hero { padding: 60px 0 50px; }
       .feature-grid { grid-template-columns: 1fr; }
       .ai-grid { grid-template-columns: 1fr 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
       footer .container { flex-direction: column; text-align: center; }
     }
   </style>
@@ -296,6 +412,7 @@
       <div class="logo">Habitr<span>a</span></div>
       <ul>
         <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
         <li><a href="support.html">Support</a></li>
         <li><a href="privacy.html">Privacy</a></li>
       </ul>
@@ -401,6 +518,111 @@
       <div class="badge">&#128274; Privacy First</div>
       <h3>Your data stays on your device</h3>
       <p>Habitra processes all AI and analytics on-device using Core ML. We never collect, transmit, or store your habit data, mood entries, or health information on any server. Period.</p>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <h2>Simple, transparent pricing</h2>
+      <p class="subtitle">Start free. Upgrade when you're ready.</p>
+
+      <div class="pricing-grid">
+        <!-- Free Tier -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3>Free</h3>
+            <div class="pricing-price">$0</div>
+            <div class="pricing-period">forever</div>
+          </div>
+          <ul class="pricing-features">
+            <li class="included"><span class="check">&#10003;</span> Up to 5 habits</li>
+            <li class="included"><span class="check">&#10003;</span> Streak tracking</li>
+            <li class="included"><span class="check">&#10003;</span> XP &amp; badges</li>
+            <li class="included"><span class="check">&#10003;</span> Smart reminders</li>
+            <li class="included"><span class="check">&#10003;</span> Basic widget</li>
+            <li class="excluded"><span class="cross">&#10005;</span> Categories</li>
+            <li class="excluded"><span class="cross">&#10005;</span> AI nudges &amp; coaching</li>
+            <li class="excluded"><span class="cross">&#10005;</span> Predictive alerts</li>
+            <li class="excluded"><span class="cross">&#10005;</span> HealthKit integration</li>
+            <li class="excluded"><span class="cross">&#10005;</span> iCloud sync</li>
+            <li class="excluded"><span class="cross">&#10005;</span> CSV export</li>
+            <li class="excluded"><span class="cross">&#10005;</span> Custom themes</li>
+          </ul>
+        </div>
+
+        <!-- Pro Monthly -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3>Pro Monthly</h3>
+            <div class="pricing-price">$4.99</div>
+            <div class="pricing-period">per month</div>
+          </div>
+          <ul class="pricing-features">
+            <li class="included"><span class="check">&#10003;</span> Unlimited habits</li>
+            <li class="included"><span class="check">&#10003;</span> Streak tracking</li>
+            <li class="included"><span class="check">&#10003;</span> XP &amp; badges</li>
+            <li class="included"><span class="check">&#10003;</span> Smart reminders</li>
+            <li class="included"><span class="check">&#10003;</span> All widgets + StandBy</li>
+            <li class="included"><span class="check">&#10003;</span> Categories</li>
+            <li class="included"><span class="check">&#10003;</span> AI nudges &amp; coaching</li>
+            <li class="included"><span class="check">&#10003;</span> Predictive alerts</li>
+            <li class="included"><span class="check">&#10003;</span> HealthKit integration</li>
+            <li class="included"><span class="check">&#10003;</span> iCloud sync</li>
+            <li class="included"><span class="check">&#10003;</span> CSV export</li>
+            <li class="included"><span class="check">&#10003;</span> Custom themes</li>
+          </ul>
+        </div>
+
+        <!-- Pro Annual -->
+        <div class="pricing-card featured">
+          <div class="pricing-badge">BEST VALUE — SAVE 33%</div>
+          <div class="pricing-header">
+            <h3>Pro Annual</h3>
+            <div class="pricing-price">$39.99</div>
+            <div class="pricing-period">per year</div>
+            <div class="pricing-detail">14-day free trial included</div>
+          </div>
+          <ul class="pricing-features">
+            <li class="included"><span class="check">&#10003;</span> Unlimited habits</li>
+            <li class="included"><span class="check">&#10003;</span> Streak tracking</li>
+            <li class="included"><span class="check">&#10003;</span> XP &amp; badges</li>
+            <li class="included"><span class="check">&#10003;</span> Smart reminders</li>
+            <li class="included"><span class="check">&#10003;</span> All widgets + StandBy</li>
+            <li class="included"><span class="check">&#10003;</span> Categories</li>
+            <li class="included"><span class="check">&#10003;</span> AI nudges &amp; coaching</li>
+            <li class="included"><span class="check">&#10003;</span> Predictive alerts</li>
+            <li class="included"><span class="check">&#10003;</span> HealthKit integration</li>
+            <li class="included"><span class="check">&#10003;</span> iCloud sync</li>
+            <li class="included"><span class="check">&#10003;</span> CSV export</li>
+            <li class="included"><span class="check">&#10003;</span> Custom themes</li>
+          </ul>
+        </div>
+
+        <!-- Pro Lifetime -->
+        <div class="pricing-card">
+          <div class="pricing-badge lifetime-badge">ONE TIME</div>
+          <div class="pricing-header">
+            <h3>Pro Lifetime</h3>
+            <div class="pricing-price">$79.99</div>
+            <div class="pricing-period">pay once, keep forever</div>
+          </div>
+          <ul class="pricing-features">
+            <li class="included"><span class="check">&#10003;</span> Unlimited habits</li>
+            <li class="included"><span class="check">&#10003;</span> Streak tracking</li>
+            <li class="included"><span class="check">&#10003;</span> XP &amp; badges</li>
+            <li class="included"><span class="check">&#10003;</span> Smart reminders</li>
+            <li class="included"><span class="check">&#10003;</span> All widgets + StandBy</li>
+            <li class="included"><span class="check">&#10003;</span> Categories</li>
+            <li class="included"><span class="check">&#10003;</span> AI nudges &amp; coaching</li>
+            <li class="included"><span class="check">&#10003;</span> Predictive alerts</li>
+            <li class="included"><span class="check">&#10003;</span> HealthKit integration</li>
+            <li class="included"><span class="check">&#10003;</span> iCloud sync</li>
+            <li class="included"><span class="check">&#10003;</span> CSV export</li>
+            <li class="included"><span class="check">&#10003;</span> Custom themes</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
