@@ -249,11 +249,112 @@
     }
     footer ul a:hover { color: var(--text-secondary); }
 
+    /* Pricing Comparison */
+    .pricing-section {
+      margin: 48px 0;
+      padding-top: 48px;
+      border-top: 1px solid var(--surface-light);
+    }
+    .pricing-section h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .pricing-section .pricing-subtitle {
+      color: var(--text-secondary);
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
+    .pricing-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: var(--surface);
+      border: 1px solid var(--surface-light);
+      border-radius: var(--radius);
+      overflow: hidden;
+      font-size: 13px;
+    }
+    .pricing-table thead th {
+      background: var(--surface-light);
+      padding: 14px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-align: center;
+      border-bottom: 1px solid var(--surface-light);
+    }
+    .pricing-table thead th:first-child {
+      text-align: left;
+    }
+    .pricing-table thead th.featured-col {
+      background: rgba(108, 99, 255, 0.15);
+      color: var(--accent-glow);
+    }
+    .pricing-table tbody td {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(36, 36, 66, 0.6);
+      color: var(--text-secondary);
+      text-align: center;
+      vertical-align: middle;
+    }
+    .pricing-table tbody td:first-child {
+      text-align: left;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+    .pricing-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .pricing-table .check-icon {
+      color: var(--success);
+      font-weight: 700;
+      font-size: 15px;
+    }
+    .pricing-table .cross-icon {
+      color: var(--text-tertiary);
+      opacity: 0.4;
+      font-size: 14px;
+    }
+    .pricing-table .price-row td {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+      padding: 16px 12px;
+      background: rgba(13, 13, 20, 0.3);
+    }
+    .pricing-table .price-row td small {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--text-tertiary);
+      margin-top: 2px;
+    }
+    .pricing-table .price-row td .trial-note {
+      color: var(--success);
+      font-size: 10px;
+      font-weight: 600;
+    }
+    .best-value-tag {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 4px;
+      vertical-align: middle;
+      letter-spacing: 0.3px;
+    }
+
     @media (max-width: 640px) {
       nav ul { gap: 16px; }
       .page-header { padding: 40px 0 30px; }
       .req-list { grid-template-columns: 1fr; }
       footer .inner { flex-direction: column; text-align: center; }
+      .pricing-table { font-size: 12px; }
+      .pricing-table thead th, .pricing-table tbody td { padding: 8px 6px; }
     }
   </style>
 </head>
@@ -363,7 +464,7 @@
 
       <div class="faq-item">
         <h3>What is Habitra Pro?</h3>
-        <p>Habitra is free for up to 3 habits. Habitra Pro unlocks unlimited habits, all streak themes, advanced AI insights, data export, HealthKit integration, and iCloud sync. Choose monthly, annual, or lifetime plans.</p>
+        <p>Habitra is free for up to 5 habits. Habitra Pro unlocks unlimited habits, all streak themes, advanced AI insights, data export, HealthKit integration, and iCloud sync. Choose monthly, annual, or lifetime plans.</p>
       </div>
       <hr class="faq-divider">
 
@@ -452,6 +553,144 @@
           HealthKit, iCloud, Notifications
         </li>
       </ul>
+    </section>
+
+    <section class="pricing-section" id="pricing">
+      <h2>Plans &amp; Pricing</h2>
+      <p class="pricing-subtitle">Start free with 5 habits. Upgrade anytime for the full experience.</p>
+
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Free</th>
+            <th>Monthly</th>
+            <th class="featured-col">Annual <span class="best-value-tag">SAVE 33%</span></th>
+            <th>Lifetime</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="price-row">
+            <td>Price</td>
+            <td>$0<small>forever</small></td>
+            <td>$4.99<small>per month</small></td>
+            <td>$39.99<small>per year</small><span class="trial-note">14-day free trial</span></td>
+            <td>$79.99<small>one time</small></td>
+          </tr>
+          <tr>
+            <td>Habits</td>
+            <td>Up to 5</td>
+            <td><span class="check-icon">&#10003;</span> Unlimited</td>
+            <td><span class="check-icon">&#10003;</span> Unlimited</td>
+            <td><span class="check-icon">&#10003;</span> Unlimited</td>
+          </tr>
+          <tr>
+            <td>Streak Tracking</td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>XP &amp; Badges</td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Smart Reminders</td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Categories</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>AI Nudges &amp; Coaching</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Predictive Alerts</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Mood Check-in</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>HealthKit Integration</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>iCloud Sync</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>All Widgets + StandBy</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>CSV Export</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Custom Streak Themes</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Quests &amp; Collections</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Seasonal Badges</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Family Sharing</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
   </div>
