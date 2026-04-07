@@ -234,11 +234,93 @@
     }
     footer ul a:hover { color: var(--text-secondary); }
 
+    /* Pricing Table in Privacy */
+    .pricing-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: var(--surface);
+      border: 1px solid var(--surface-light);
+      border-radius: 12px;
+      overflow: hidden;
+      font-size: 13px;
+      margin: 20px 0 14px;
+    }
+    .pricing-table thead th {
+      background: var(--surface-light);
+      padding: 12px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-align: center;
+      border-bottom: 1px solid var(--surface-light);
+    }
+    .pricing-table thead th:first-child {
+      text-align: left;
+    }
+    .pricing-table thead th.featured-col {
+      background: rgba(108, 99, 255, 0.15);
+      color: var(--accent-glow);
+    }
+    .pricing-table tbody td {
+      padding: 8px 10px;
+      border-bottom: 1px solid rgba(36, 36, 66, 0.6);
+      color: var(--text-secondary);
+      text-align: center;
+      vertical-align: middle;
+      font-size: 13px;
+    }
+    .pricing-table tbody td:first-child {
+      text-align: left;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+    .pricing-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .pricing-table .check-icon {
+      color: var(--success);
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .pricing-table .cross-icon {
+      color: var(--text-tertiary);
+      opacity: 0.4;
+      font-size: 13px;
+    }
+    .pricing-table .price-row td {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-primary);
+      padding: 14px 10px;
+      background: rgba(13, 13, 20, 0.3);
+    }
+    .pricing-table .price-row td small {
+      display: block;
+      font-size: 10px;
+      font-weight: 400;
+      color: var(--text-tertiary);
+      margin-top: 2px;
+    }
+    .best-value-tag {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+
     @media (max-width: 640px) {
       nav ul { gap: 16px; }
       .page-header { padding: 40px 0 16px; }
       .data-table { font-size: 13px; }
       .data-table th, .data-table td { padding: 8px 10px; }
+      .pricing-table { font-size: 11px; }
+      .pricing-table thead th, .pricing-table tbody td { padding: 6px 5px; }
       footer .inner { flex-direction: column; text-align: center; }
     }
   </style>
@@ -376,6 +458,94 @@
 
       <h2>7. In-App Purchases</h2>
       <p>Habitra offers optional subscription plans and tip jar purchases through Apple's App Store. All payment processing is handled by Apple. We do not have access to your payment information, credit card details, or Apple ID. Purchase history and subscription status are managed by Apple's StoreKit framework on your device.</p>
+
+      <p>The following table summarizes what is included in each plan:</p>
+
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Free</th>
+            <th>Monthly</th>
+            <th class="featured-col">Annual <span class="best-value-tag">SAVE 33%</span></th>
+            <th>Lifetime</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="price-row">
+            <td>Price</td>
+            <td>$0<small>forever</small></td>
+            <td>$4.99<small>/month</small></td>
+            <td>$39.99<small>/year</small></td>
+            <td>$79.99<small>one time</small></td>
+          </tr>
+          <tr>
+            <td>Habits</td>
+            <td>Up to 5</td>
+            <td><span class="check-icon">&#10003;</span> Unlimited</td>
+            <td><span class="check-icon">&#10003;</span> Unlimited</td>
+            <td><span class="check-icon">&#10003;</span> Unlimited</td>
+          </tr>
+          <tr>
+            <td>Streak Tracking</td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>XP &amp; Badges</td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Categories</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>AI Nudges &amp; Coaching</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>HealthKit Integration</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>iCloud Sync</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>CSV Export</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Custom Themes</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>No personal data is collected, transmitted, or stored during any purchase flow. Tip jar purchases are optional one-time consumables ($1.99, $4.99, $9.99) that support development and do not unlock features.</p>
 
       <h2>8. Notifications</h2>
       <p>With your permission, Habitra sends local notifications to remind you about habits. These notifications are:</p>
