@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copyright &amp; Terms of Use - Habitra</title>
+  <meta name="description" content="Habitra Copyright Notice and Terms of Use. Legal information, subscription terms, and usage conditions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0D0D14;
+      --surface: #1A1A2E;
+      --surface-light: #242442;
+      --accent: #6C63FF;
+      --accent-bright: #7C73FF;
+      --accent-glow: #A89AFF;
+      --text-primary: #EEEDFE;
+      --text-secondary: #AFA9EC;
+      --text-tertiary: #7A74B0;
+      --success: #34D399;
+      --radius: 16px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent-glow); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Nav */
+    nav {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--surface-light);
+      max-width: 960px;
+      margin: 0 auto;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    nav .inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.5px;
+    }
+    .logo span { color: var(--accent); }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+    }
+    nav ul a {
+      color: var(--text-secondary);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav ul a:hover { color: var(--text-primary); text-decoration: none; }
+    nav ul a.active { color: var(--accent-glow); }
+
+    /* Header */
+    .page-header {
+      padding: 60px 0 20px;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .page-header .effective {
+      color: var(--text-tertiary);
+      font-size: 14px;
+    }
+
+    /* Legal badge */
+    .legal-badge {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(108, 99, 255, 0.08);
+      border: 1px solid rgba(108, 99, 255, 0.2);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 32px 0 48px;
+    }
+    .legal-badge .icon {
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+    .legal-badge p {
+      color: var(--accent-glow);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* Content */
+    .policy-content h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin: 40px 0 16px;
+      padding-top: 20px;
+    }
+    .policy-content h2:first-child {
+      margin-top: 0;
+      padding-top: 0;
+    }
+    .policy-content h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin: 24px 0 10px;
+      color: var(--accent-glow);
+    }
+    .policy-content p {
+      color: var(--text-secondary);
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+    .policy-content ul {
+      color: var(--text-secondary);
+      font-size: 15px;
+      margin: 0 0 14px 20px;
+    }
+    .policy-content li {
+      margin-bottom: 6px;
+    }
+    .policy-content strong {
+      color: var(--text-primary);
+    }
+
+    /* Pricing Table */
+    .pricing-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: var(--surface);
+      border: 1px solid var(--surface-light);
+      border-radius: 12px;
+      overflow: hidden;
+      font-size: 13px;
+      margin: 20px 0 14px;
+    }
+    .pricing-table thead th {
+      background: var(--surface-light);
+      padding: 12px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-align: center;
+      border-bottom: 1px solid var(--surface-light);
+    }
+    .pricing-table thead th:first-child {
+      text-align: left;
+    }
+    .pricing-table thead th.featured-col {
+      background: rgba(108, 99, 255, 0.15);
+      color: var(--accent-glow);
+    }
+    .pricing-table tbody td {
+      padding: 8px 10px;
+      border-bottom: 1px solid rgba(36, 36, 66, 0.6);
+      color: var(--text-secondary);
+      text-align: center;
+      vertical-align: middle;
+      font-size: 13px;
+    }
+    .pricing-table tbody td:first-child {
+      text-align: left;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+    .pricing-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .pricing-table .check-icon {
+      color: var(--success);
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .pricing-table .cross-icon {
+      color: var(--text-tertiary);
+      opacity: 0.4;
+      font-size: 13px;
+    }
+    .pricing-table .price-row td {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-primary);
+      padding: 14px 10px;
+      background: rgba(13, 13, 20, 0.3);
+    }
+    .pricing-table .price-row td small {
+      display: block;
+      font-size: 10px;
+      font-weight: 400;
+      color: var(--text-tertiary);
+      margin-top: 2px;
+    }
+    .best-value-tag {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+
+    /* Tip Jar Table */
+    .tip-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: var(--surface);
+      border: 1px solid var(--surface-light);
+      border-radius: 12px;
+      overflow: hidden;
+      font-size: 14px;
+      margin: 16px 0 24px;
+    }
+    .tip-table th {
+      text-align: left;
+      padding: 12px 16px;
+      background: var(--surface-light);
+      color: var(--text-primary);
+      font-weight: 600;
+      border-bottom: 1px solid var(--surface-light);
+    }
+    .tip-table th:first-child {
+      border-radius: 8px 0 0 0;
+    }
+    .tip-table th:last-child {
+      border-radius: 0 8px 0 0;
+    }
+    .tip-table td {
+      padding: 10px 16px;
+      border-bottom: 1px solid rgba(36, 36, 66, 0.6);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+    .tip-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Section Divider */
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--surface-light);
+      margin: 40px 0;
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid var(--surface-light);
+      max-width: 960px;
+      margin: 60px auto 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    footer .inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    footer p {
+      color: var(--text-tertiary);
+      font-size: 13px;
+    }
+    footer ul {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+    }
+    footer ul a {
+      color: var(--text-tertiary);
+      font-size: 13px;
+    }
+    footer ul a:hover { color: var(--text-secondary); }
+
+    @media (max-width: 640px) {
+      nav ul { gap: 16px; }
+      .page-header { padding: 40px 0 16px; }
+      .pricing-table { font-size: 11px; }
+      .pricing-table thead th, .pricing-table tbody td { padding: 6px 5px; }
+      .tip-table { font-size: 13px; }
+      .tip-table th, .tip-table td { padding: 8px 10px; }
+      footer .inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="inner">
+      <a href="index.html" class="logo">Habitr<span>a</span></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="copyright.html" class="active">Legal</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Copyright &amp; Terms of Use</h1>
+      <p class="effective">Last updated: April 2026</p>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <div class="legal-badge">
+      <div class="icon">&#9878;</div>
+      <p>This page contains the copyright notice, license terms, subscription details, and legal disclaimers for the Habitra app.</p>
+    </div>
+
+    <div class="policy-content">
+
+      <!-- 1. Copyright Notice -->
+      <h2>1. Copyright Notice</h2>
+      <p>&copy; 2026 Jeanese Latiolais. All rights reserved.</p>
+      <p>Habitra, including but not limited to its source code, user interface design, graphics, icons, animations, text content, AI models, and documentation, is the exclusive intellectual property of Jeanese Latiolais. No portion of this application may be reproduced, distributed, modified, reverse-engineered, or used for any commercial or non-commercial purpose without prior written consent from the copyright holder.</p>
+      <p>The Habitra name, logo, and all associated branding are trademarks of Jeanese Latiolais. All third-party trademarks, service marks, and trade names referenced in this application are the property of their respective owners.</p>
+
+      <!-- 2. License Grant -->
+      <h2>2. License Grant</h2>
+      <p>Subject to your compliance with these Terms of Use, Jeanese Latiolais grants you a <strong>limited, non-exclusive, non-transferable, revocable license</strong> to download, install, and use Habitra on Apple devices that you own or control, solely for your personal, non-commercial use, in accordance with these terms and the Apple Media Services Terms and Conditions.</p>
+      <p>This license does not permit you to:</p>
+      <ul>
+        <li>Copy, modify, or distribute the App or any portion thereof</li>
+        <li>Reverse-engineer, decompile, or disassemble the App</li>
+        <li>Rent, lease, lend, sell, sublicense, or otherwise transfer the App to any third party</li>
+        <li>Remove, alter, or obscure any copyright, trademark, or other proprietary notices</li>
+        <li>Use the App for any unlawful, harmful, or unauthorized purpose</li>
+        <li>Attempt to gain unauthorized access to any features, systems, or networks connected to the App</li>
+      </ul>
+      <p>We reserve the right to revoke this license at any time if you violate these terms.</p>
+
+      <!-- 3. Privacy Summary -->
+      <h2>3. Privacy Summary</h2>
+      <p>Habitra is built with a <strong>privacy-first, on-device architecture</strong>. Your data stays on your device and is never collected, transmitted to, or stored on external servers operated by us.</p>
+      <ul>
+        <li><strong>All data processing happens locally</strong> on your device using Apple's SwiftData and Core ML frameworks</li>
+        <li><strong>No analytics, tracking, or advertising</strong> SDKs are included in the App</li>
+        <li><strong>No personal information</strong> is collected, sold, or shared with third parties</li>
+        <li><strong>Optional iCloud Sync:</strong> If enabled by you, habit data syncs across your devices via your private iCloud account (managed by Apple, encrypted in transit and at rest). iCloud Sync is disabled by default</li>
+      </ul>
+      <p>For full details, please read our <a href="privacy.html">Privacy Policy</a>.</p>
+
+      <!-- 4. HealthKit Data Handling -->
+      <h2>4. HealthKit Data Handling</h2>
+      <p>With your explicit permission, Habitra may <strong>read</strong> the following data from Apple HealthKit:</p>
+      <ul>
+        <li>Step count (daily totals)</li>
+        <li>Sleep analysis (duration)</li>
+        <li>Heart rate (resting)</li>
+        <li>Heart rate variability (HRV)</li>
+        <li>Workout duration</li>
+      </ul>
+      <p>This data is used <strong>exclusively for on-device correlation analysis</strong> to show how health metrics relate to your habit completion patterns. In strict compliance with Apple's HealthKit guidelines:</p>
+      <ul>
+        <li>HealthKit data is <strong>read-only</strong> &mdash; Habitra does not write any data to HealthKit</li>
+        <li>HealthKit data is processed and stored <strong>only on your device</strong></li>
+        <li>HealthKit data is <strong>never</strong> transmitted to external servers, third parties, or advertising networks</li>
+        <li>HealthKit data is <strong>never</strong> used for marketing, advertising, or data mining purposes</li>
+        <li>HealthKit data is <strong>never</strong> sold or monetized in any way</li>
+      </ul>
+      <p>You may revoke HealthKit access at any time via iPhone Settings &gt; Health &gt; Data Access &amp; Devices &gt; Habitra.</p>
+
+      <hr class="section-divider">
+
+      <!-- 5. Subscription & Billing Terms -->
+      <h2>5. Subscription &amp; Billing Terms</h2>
+      <p>Habitra offers a free tier and optional paid subscription plans through Apple's App Store. All payments are processed exclusively by Apple. We do not have access to your payment information, credit card details, or Apple ID credentials.</p>
+
+      <h3>5.1 Plans &amp; Pricing</h3>
+
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Plan</th>
+            <th>Free</th>
+            <th>Pro Monthly</th>
+            <th class="featured-col">Pro Annual <span class="best-value-tag">SAVE 33%</span></th>
+            <th>Pro Lifetime</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="price-row">
+            <td>Price</td>
+            <td>$0<small>forever</small></td>
+            <td>$4.99<small>/month</small></td>
+            <td>$39.99<small>/year</small></td>
+            <td>$79.99<small>one time</small></td>
+          </tr>
+          <tr>
+            <td>Habits</td>
+            <td>Up to 5</td>
+            <td><span class="check-icon">&#10003;</span> Unlimited</td>
+            <td><span class="check-icon">&#10003;</span> Unlimited</td>
+            <td><span class="check-icon">&#10003;</span> Unlimited</td>
+          </tr>
+          <tr>
+            <td>Streak Tracking</td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>XP &amp; Badges</td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Categories</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>AI Nudges &amp; Coaching</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>HealthKit Integration</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>iCloud Sync</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>CSV Export</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Custom Themes</td>
+            <td><span class="cross-icon">&#10005;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+            <td><span class="check-icon">&#10003;</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>5.2 Free Tier</h3>
+      <p>The Free tier allows you to track <strong>up to 5 habits</strong> at no cost, forever. No credit card is required and no trial period applies to the Free tier. You may upgrade to a Pro plan at any time.</p>
+
+      <h3>5.3 Pro Annual Free Trial</h3>
+      <p>The Pro Annual plan includes a <strong>14-day free trial</strong>. During the trial period, you have full access to all Pro features at no charge. If you do not cancel before the trial ends, your subscription will automatically convert to a paid annual subscription at <strong>$39.99/year</strong>. You may cancel the trial at any time before it expires to avoid being charged.</p>
+
+      <h3>5.4 Auto-Renewal</h3>
+      <p>Pro Monthly and Pro Annual subscriptions <strong>automatically renew</strong> at the end of each billing cycle unless you cancel at least <strong>24 hours before</strong> the end of the current period. Your Apple ID account will be charged for renewal within 24 hours prior to the end of the current period at the rate of your selected plan.</p>
+
+      <h3>5.5 Cancellation</h3>
+      <p>You may cancel your subscription at any time. To cancel, go to <strong>iPhone Settings &gt; [Your Name] &gt; Subscriptions &gt; Habitra</strong> and tap Cancel Subscription. Cancellation takes effect at the end of the current billing period &mdash; you will retain access to Pro features until that date. No partial refunds are provided for unused portions of a billing cycle.</p>
+
+      <h3>5.6 Lifetime Purchase</h3>
+      <p>The Pro Lifetime plan is a <strong>one-time purchase of $79.99</strong> that grants permanent access to all Pro features. This is not a subscription and does not renew. The Lifetime purchase is tied to your Apple ID and can be restored on any device signed into the same Apple ID.</p>
+
+      <h3>5.7 Tip Jar</h3>
+      <p>Habitra offers optional Tip Jar purchases to support ongoing development. Tips are <strong>one-time consumable purchases</strong> and <strong>do not unlock any features or functionality</strong>.</p>
+
+      <table class="tip-table">
+        <thead>
+          <tr>
+            <th>Tip</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Small Tip</td>
+            <td>$1.99</td>
+          </tr>
+          <tr>
+            <td>Medium Tip</td>
+            <td>$4.99</td>
+          </tr>
+          <tr>
+            <td>Large Tip</td>
+            <td>$9.99</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>5.8 Price Changes</h3>
+      <p>Prices are subject to change. If we change subscription pricing, existing subscribers will be notified in advance through Apple's standard notification process before the new price takes effect. You may choose to cancel before the price change applies.</p>
+
+      <hr class="section-divider">
+
+      <!-- 6. Refund Policy -->
+      <h2>6. Refund Policy</h2>
+      <p>All purchases, including subscriptions and Tip Jar contributions, are processed by Apple through the App Store. We do not process payments directly and therefore cannot issue refunds.</p>
+      <p>If you believe you are entitled to a refund, please contact Apple directly:</p>
+      <ul>
+        <li>Visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a></li>
+        <li>Sign in with your Apple ID</li>
+        <li>Locate the Habitra purchase and submit a refund request</li>
+      </ul>
+      <p>Apple handles all refund decisions in accordance with their own policies and terms.</p>
+
+      <!-- 7. AI Disclaimer -->
+      <h2>7. AI &amp; Health Disclaimer</h2>
+      <p>Habitra incorporates on-device artificial intelligence features including pattern detection, streak risk prediction, mood-habit correlation analysis, adaptive reminders, and coaching messages. These features are provided <strong>for informational and motivational purposes only</strong>.</p>
+      <p><strong>Habitra is not a medical device and does not provide medical, psychological, therapeutic, or clinical advice.</strong> AI-generated insights, predictions, coaching messages, and health scores should not be interpreted as professional health guidance, diagnoses, or treatment recommendations.</p>
+      <ul>
+        <li>Do not rely on Habitra as a substitute for professional medical or mental health advice</li>
+        <li>Always consult a qualified healthcare provider for medical concerns or before making changes to your health routines</li>
+        <li>AI predictions and insights are based on your personal usage patterns and may not be accurate or applicable to your specific health situation</li>
+        <li>HealthKit-derived correlations are statistical observations, not clinical findings</li>
+      </ul>
+      <p>If you are experiencing a medical or mental health emergency, contact emergency services immediately.</p>
+
+      <!-- 8. Limitation of Liability -->
+      <h2>8. Limitation of Liability</h2>
+      <p>Habitra is provided on an <strong>"AS IS" and "AS AVAILABLE"</strong> basis without warranties of any kind, whether express, implied, statutory, or otherwise, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+      <p>To the maximum extent permitted by applicable law, Jeanese Latiolais shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:</p>
+      <ul>
+        <li>Loss of data, habits, streaks, or completion history</li>
+        <li>Loss of profits, revenue, or anticipated savings</li>
+        <li>Reliance on AI-generated insights, predictions, or coaching messages</li>
+        <li>Interruption of service, app downtime, or iCloud sync failures</li>
+        <li>Any damages arising from unauthorized access to or alteration of your device data</li>
+      </ul>
+      <p>In no event shall our total liability exceed the amount you paid for the App in the twelve (12) months preceding the claim. If you have not made any purchases, our total liability shall not exceed fifty dollars ($50 USD).</p>
+      <p>Some jurisdictions do not allow the exclusion or limitation of certain warranties or liabilities. In such jurisdictions, our liability shall be limited to the fullest extent permitted by law.</p>
+
+      <h3>Indemnification</h3>
+      <p>You agree to indemnify and hold harmless Jeanese Latiolais from any claims, damages, losses, or expenses (including reasonable attorney's fees) arising from your use of the App, your violation of these terms, or your violation of any rights of a third party.</p>
+
+      <h3>Governing Law</h3>
+      <p>These Terms of Use shall be governed by and construed in accordance with the laws of the United States, without regard to conflict of law principles. Any disputes arising from these terms or your use of the App shall be resolved in the courts of competent jurisdiction.</p>
+
+      <hr class="section-divider">
+
+      <!-- 9. Contact -->
+      <h2>9. Contact</h2>
+      <p>If you have questions about these Terms of Use, the copyright notice, or any legal matter related to Habitra, please contact us at:</p>
+      <p><strong>Email:</strong> <a href="mailto:habitra@outlook.com">habitra@outlook.com</a></p>
+
+      <!-- 10. Updates -->
+      <h2>10. Changes to These Terms</h2>
+      <p>We may update these Terms of Use from time to time. Changes will be posted on this page with an updated "Last updated" date. Your continued use of the App after any changes constitutes acceptance of the revised terms. Since we do not collect email addresses, we encourage you to review this page periodically.</p>
+      <p><strong>Last updated:</strong> April 2026</p>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="inner">
+      <p>&copy; 2026 Habitra. All rights reserved.</p>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
